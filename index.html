@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Sharma - Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
+
+  /* Header */
+  header {
+    background-color: #0a192f; color: white; padding: 15px 20px;
+    position: fixed; width: 100%; top: 0; z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  header h1 { font-size: 22px; }
+  nav ul { display: flex; list-style: none; }
+  nav ul li { margin-left: 20px; }
+  nav ul li a { color: white; text-decoration: none; }
+  nav ul li a:hover { color: #0077b6; }
+
+  /* Resume Button */
+  .resume-btn {
+    background: linear-gradient(90deg, #0077b6, #0096c7);
+    color: white; padding: 8px 14px;
+    margin-left: 20px; border-radius: 5px; font-weight: bold;
+    text-decoration: none; transition: 0.3s ease;
+  }
+  .resume-btn:hover { background: linear-gradient(90deg, #005f73, #0077b6); }
+
+  /* Mobile Menu */
+  #menu-btn { display: none; background: none; border: none; cursor: pointer; }
+  #menu-btn svg { fill: white; }
+  #mobile-menu { display: none; background-color: #0a192f; }
+  #mobile-menu ul { list-style: none; padding: 10px; }
+  #mobile-menu ul li { padding: 10px 0; }
+  #mobile-menu ul li a { color: white; text-decoration: none; }
+
+  /* Sections */
+  section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+  section h2 { font-size: 26px; margin-bottom: 15px; color: #0a192f; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;
+  }
+  .skill-card {
+    background: white; padding: 15px; border-radius: 8px;
+    border: 1px solid #ddd; transition: transform 0.2s ease;
+  }
+  .skill-card:hover { transform: scale(1.05); border-color: #0077b6; }
+
+  /* Projects */
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+  }
+  .project-card {
+    background: white; padding: 20px; border-radius: 8px;
+    border: 1px solid #ddd; transition: box-shadow 0.3s ease;
+  }
+  .project-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .project-card a {
+    display: inline-block; margin-top: 10px; background: #0077b6; color: white;
+    padding: 8px 14px; border-radius: 5px; text-decoration: none;
+  }
+  .project-card a:hover { background: #005f73; }
+
+  /* Contact */
+  #contact { background-color: #0a192f; color: white; text-align: center; }
+  #contact a { color: #90e0ef; text-decoration: underline; }
+
+  /* Footer */
+  footer { background: #0a192f; color: #ccc; text-align: center; padding: 10px; font-size: 14px; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul { display: none; }
+    #menu-btn { display: block; }
+    #mobile-menu.show { display: block; }
+    .resume-btn { margin: 10px 0 0 0; display: inline-block; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Krishna Sharma</h1>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="KRISHNA resume.pdf" download class="resume-btn">📄 Download Resume</a></li>
+    </ul>
+  </nav>
+  <button id="menu-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+  </button>
+</header>
+
+<div id="mobile-menu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="KRISHNA resume.pdf" download class="resume-btn">📄 Download Resume</a></li>
+  </ul>
+</div>
+
+<div style="height: 70px;"></div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Data Analyst with strong skills in Python, SQL, and data visualization tools like Power BI and Excel.
+    Experienced in data cleaning, transformation, EDA, and creating actionable dashboards. Passionate about
+    uncovering insights and solving real-world problems with data.
+  </p>
+</section>
+
+<section id="skills" style="background-color:#f4f4f4;">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">Python (Pandas, Matplotlib)</div>
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">Excel</div>
+    <div class="skill-card">Power BI</div>
+    <div class="skill-card">HTML, CSS, JavaScript</div>
+    <div class="skill-card">React.js</div>
+    <div class="skill-card">Git & GitHub</div>
+    <div class="skill-card">AWS (Beginner)</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio website showcasing my skills, projects, and contact information.</p>
+      <a href="https://github.com/krshna02/Portfolio" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Power BI Dashboard</h3>
+      <p>Interactive dashboard for analyzing business data, providing actionable insights and KPIs using Power BI.</p>
+      <a href="https://github.com/krshna02/power-bi-project" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Rock Paper Scissors Game</h3>
+      <p>JavaScript-based game where players challenge the computer in a fun match of Rock, Paper, Scissors.</p>
+      <a href="https://github.com/krshna02/krishnajsproject" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Online Quiz Project</h3>
+      <p>Interactive quiz game in JavaScript with instant feedback and scoring system.</p>
+      <a href="https://github.com/krshna02/krishnajsproject" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Password Generator</h3>
+      <p>React.js-based password generator with custom length and character type options.</p>
+      <a href="https://github.com/krshna02/react-projects" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Sample Brand Page</h3>
+      <p>Modern, responsive brand landing page built in React.js showcasing a clean UI design.</p>
+      <a href="https://github.com/krshna02/react-projects" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Tic Tac Toe Game</h3>
+      <p>Python console game for two players with simple win/draw detection logic.</p>
+      <a href="https://github.com/krshna02/Tic_Tic_Toeproject" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Calculator Project</h3>
+      <p>Python-based calculator application that performs basic arithmetic operations.</p>
+      <a href="https://github.com/krshna02/calcproject" target="_blank">View Project</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>📧 Email: <a href="mailto:abhinavsharma222003@gmail.com">abhinavsharma222003@gmail.com</a></p>
+  <p>📱 Phone: +91 9105893452</p>
+  <p>🔗 <a href="https://www.linkedin.com/in/krsna0218" target="_blank">LinkedIn</a></p>
+  <p>🔗 <a href="https://github.com/krshna02" target="_blank">GitHub</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Krishna Sharma. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
