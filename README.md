@@ -5,7 +5,7 @@ It is a responsive, single-page HTML/CSS/JavaScript site designed to highlight m
 
 ## 🚀 Live Demo
 You can view the live version of the portfolio here:  
-*(Add GitHub Pages or hosting link once deployed)*
+https://portfolio-alpha-tan-387a0yowu7.vercel.app/
 
 ---
 
